@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./App.css";
 import { logEvent } from "firebase/analytics";
 import firebaseAnalytics from "./firebase/init";
 import "./animations/animation.css"
-import IntroPage from "./components/introPage";
+import IntroPage from "./components/IntroPage";
 
 function App() {
   useEffect(() => {

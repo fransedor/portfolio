@@ -1,4 +1,3 @@
-import React from "react";
 import windowOpenAnimation from "../animations/windowOpen";
 import "../animations/animation.css"
 
