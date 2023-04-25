@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
+import { logEvent } from "firebase/analytics";
+import firebaseAnalytics from "./firebase/init";
 
 function App() {
-  const [count, setCount] = useState(0)
 
+	useEffect(() => {	
+		logEvent(firebaseAnalytics, "page_view")
+	}, [])
+	
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main>
+        <div className="flex w-full items-center h-screen font-bold text-6xl relative">
+					<div className="grow text-end">
+						<p>PORT</p>
+						<p>FRAN</p>
+						<p>RAVE</p>
+					</div>
+					<div className="grow">
+						<p>FOLIO</p>
+						<p>SEDO</p>
+						<p>LINO</p>
+					</div>
+					<button className="absolute left-1/2 -translate-x-1/2 bottom-72">START</button>
+				</div>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
