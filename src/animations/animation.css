@@ -1,0 +1,41 @@
+.divisor-animate {
+	background-color: black;
+	height: 100%;
+	position: absolute;
+	animation: fullHeight 1s;
+	animation-fill-mode: forwards;
+}
+
+.remove-animate {
+	animation: 1s removeElement 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes removeElement {
+	from {
+		width: 100%;
+		display: block;
+	}
+	to {
+		width: 0;
+		display: none;
+	}
+}
+
+@keyframes fullHeight {
+	0% {
+		transform: scale(1, 0);
+		width: 2px;
+	}
+	50% {
+		transform: scale(1, 1);
+		width: 2px;
+		left: 50%;
+	}
+	100% {
+		transform: scale(1, 1);
+		width: 100%;
+		left: 0;
+	}
+
+}
