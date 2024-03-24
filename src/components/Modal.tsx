@@ -1,14 +1,11 @@
-import React from "react";
+import ModalContent from "./ModalContent";
 
 interface ModalProps {
   open: boolean;
-  description: string;
-  type: "experience" | "contact" | "projects";
-  points: string[];
-  url?: string;
+  type: "experience" | "projects";
   onCloseModal?: VoidFunction;
 }
-const Modal = ({ open, description, points, type, url, onCloseModal }: ModalProps) => {
+const Modal = ({ open, type, onCloseModal }: ModalProps) => {
   return (
     <>
       {open && (
@@ -18,7 +15,7 @@ const Modal = ({ open, description, points, type, url, onCloseModal }: ModalProp
           <div className="flex justify-center items-center w-full h-full">
             {/* CONTENT  */}
             <div
-              className="h-[600px] w-[800px] border-4 p-6 border-white bg-black text-white rounded-xl"
+              className="h-[600px] w-[800px] border-4 p-6 border-white bg-black text-white rounded-xl overflow-auto no-scrollbar"
               onClick={(e) => {
                 e.stopPropagation();
               }}
@@ -34,18 +31,8 @@ const Modal = ({ open, description, points, type, url, onCloseModal }: ModalProp
                 </button>
               </div>
 
-              {/*  */}
-              <div className="flex">
-                <div className="flex flex-col w-1/2 gap-4">
-                  <p>{description}</p>
-                  <ul>
-                    {points.map((point, idx) => (
-                      <li key={idx}>{point}</li>
-                    ))}
-                  </ul>
-                  {url && <a href={url}>{url}</a>}
-                </div>
-              </div>
+              {/* CONTENT */}
+              <ModalContent type={type} />
             </div>
           </div>
         </div>

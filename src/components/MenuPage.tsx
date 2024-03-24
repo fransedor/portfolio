@@ -2,8 +2,9 @@ import { modalOpenAnimation, removeModalOpenAnimation } from "../animations/moda
 import Modal from "./Modal";
 import { useState } from "react";
 import "../animations/MenuPage/menu.css";
+import { CONTENTS } from "../json/content";
 
-type ModalType = "experience" | "projects" | "contact";
+type ModalType = "experience" | "projects";
 const MenuPage = () => {
   const [modalType, setModalType] = useState<ModalType | undefined>(undefined);
   console.log(modalType);
@@ -13,9 +14,9 @@ const MenuPage = () => {
         <button
           onClick={() => {
             modalOpenAnimation();
-						setTimeout(() => {
-							setModalType("experience")
-						}, 700);
+            setTimeout(() => {
+              setModalType("experience");
+            }, 700);
           }}
           className="sm:h-full cursor-pointer text-white text-3xl p-4 w-screen sm:bg-[length:300%_100%] sm:text-[80px] flex items-center px-20 transition-all duration-500 ease-in bg-size-200  bg-left hover:bg-right bg-gradient-to-r from-black from-30% via-green-800 to-green-500"
         >
@@ -24,9 +25,9 @@ const MenuPage = () => {
         <div
           onClick={() => {
             modalOpenAnimation();
-						setTimeout(() => {
-							setModalType("projects")
-						}, 700);
+            setTimeout(() => {
+              setModalType("projects");
+            }, 700);
           }}
           className="invisible-modal-container relative sm:h-full cursor-pointer text-white text-3xl p-4 w-screen  sm:bg-[length:300%_100%] sm:text-[80px] flex items-center px-20 transition-all duration-500 ease-in bg-size-200  bg-left hover:bg-right bg-gradient-to-r from-black from-30% via-green-800 to-green-500"
         >
@@ -43,13 +44,11 @@ const MenuPage = () => {
       </div>
       <Modal
         open={modalType !== undefined}
-        type={modalType as ModalType}
-        description="lorem"
-        points={["lorem"]}
+        type={modalType!}
         onCloseModal={() => {
-					removeModalOpenAnimation();
-					setModalType(undefined)
-				}}
+          removeModalOpenAnimation();
+          setModalType(undefined);
+        }}
       />
     </>
   );
