@@ -9,31 +9,35 @@ const MenuPage = () => {
   console.log(modalType);
   return (
     <>
-      <div className="w-screen overflow-hidden h-screen bg-black flex flex-col items-center justify-center sm:items-stretch sm:justify-normal">
+      <div className=" w-screen overflow-hidden h-screen bg-black flex flex-col items-center justify-center sm:items-stretch sm:justify-normal">
         <button
           onClick={() => {
-            removeModalOpenAnimation();
-            //setModalType("experience")
+            modalOpenAnimation();
+						setTimeout(() => {
+							setModalType("experience")
+						}, 700);
           }}
-          className="sm:h-full cursor-pointer text-white text-3xl p-4 w-screen overflow-hidden sm:bg-[length:300%_100%] sm:text-[80px] flex items-center px-20 transition-all duration-500 ease-in bg-size-200  bg-left hover:bg-right bg-gradient-to-r from-black from-30% via-green-800 to-green-500"
+          className="sm:h-full cursor-pointer text-white text-3xl p-4 w-screen sm:bg-[length:300%_100%] sm:text-[80px] flex items-center px-20 transition-all duration-500 ease-in bg-size-200  bg-left hover:bg-right bg-gradient-to-r from-black from-30% via-green-800 to-green-500"
         >
           EXPERIENCE
         </button>
         <div
           onClick={() => {
             modalOpenAnimation();
-            //setModalType("projects")
+						setTimeout(() => {
+							setModalType("projects")
+						}, 700);
           }}
-          className="invisible-modal-container relative sm:h-full cursor-pointer text-white text-3xl p-4 w-screen overflow-hidden sm:bg-[length:300%_100%] sm:text-[80px] flex items-center px-20 transition-all duration-500 ease-in bg-size-200  bg-left hover:bg-right bg-gradient-to-r from-black from-30% via-green-800 to-green-500"
+          className="invisible-modal-container relative sm:h-full cursor-pointer text-white text-3xl p-4 w-screen  sm:bg-[length:300%_100%] sm:text-[80px] flex items-center px-20 transition-all duration-500 ease-in bg-size-200  bg-left hover:bg-right bg-gradient-to-r from-black from-30% via-green-800 to-green-500"
         >
           <button>PROJECTS</button>
-          <div className="border-y-4 border-white absolute top-0 left-0 h-full w-screen invisible-modal flex=col justify-between">
-            <div className="h-0 w-1 bg-white"></div>
-            <div className="h-0 w-1 bg-white"></div>
+          {/* INVISIBLE MODAL */}
+          <div className="border-y-4 border-white absolute top-0 left-0 h-full w-screen invisible-modal flex flex-col justify-between">
+            <div className="border-x-4 border-white mb-auto w-full bg-transparent"></div>
+            <div className="border-x-4 border-white mt-auto w-full bg-transparent"></div>
           </div>
         </div>
-        {/* INVISIBLE MODAL */}
-        <button className="sm:h-full cursor-pointer text-white text-3xl p-4 w-screen overflow-hidden sm:bg-[length:300%_100%] sm:text-[80px] flex items-center px-20 transition-all duration-500 ease-in bg-size-200  bg-left hover:bg-right bg-gradient-to-r from-black from-30% via-green-800 to-green-500">
+        <button className="sm:h-full cursor-pointer text-white text-3xl p-4 w-screen sm:bg-[length:300%_100%] sm:text-[80px] flex items-center px-20 transition-all duration-500 ease-in bg-size-200  bg-left hover:bg-right bg-gradient-to-r from-black from-30% via-green-800 to-green-500">
           CONTACT
         </button>
       </div>
@@ -42,7 +46,10 @@ const MenuPage = () => {
         type={modalType as ModalType}
         description="lorem"
         points={["lorem"]}
-        onCloseModal={() => setModalType(undefined)}
+        onCloseModal={() => {
+					removeModalOpenAnimation();
+					setModalType(undefined)
+				}}
       />
     </>
   );
