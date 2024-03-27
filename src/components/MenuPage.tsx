@@ -2,7 +2,6 @@ import { modalOpenAnimation, removeModalOpenAnimation } from "../animations/moda
 import Modal from "./Modal";
 import { useState } from "react";
 import "../animations/MenuPage/menu.css";
-import { CONTENTS } from "../json/content";
 
 type ModalType = "experience" | "projects";
 const MenuPage = () => {

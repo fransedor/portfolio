@@ -1,4 +1,3 @@
-import React from "react";
 import { CONTENTS } from "../json/content";
 
 const ModalContent = ({ type }: { type: "projects" | "experience" }) => {
