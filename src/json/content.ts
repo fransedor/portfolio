@@ -4,6 +4,7 @@ export interface ContentType {
   description: string;
   points: string[];
   url?: string;
+  images?: string[];
 }
 
 export const CONTENTS: Record<"experience" | "projects", ContentType[]> = {
@@ -12,13 +13,14 @@ export const CONTENTS: Record<"experience" | "projects", ContentType[]> = {
       title: "Frontend Engineer",
       company: "Bluebird Group",
       description:
-        "Bluebird Group is the leading transportation company in Indonesia, mainly known for its taxi services, but also provide other services such as buses, executive taxis, and car rentals.",
+        "Bluebird Group is the leading transportation company in Indonesia, mainly known for its taxi services.",
       points: [
-        "Pioneered the micro frontend pattern using React and Rollup, enabling cross-team collaborations and improving developer’s productivity.",
-        "Maintain and update a legacy project, resolving 16 high priority bugs within 3 weeks of joining the project, and upgrading JavaScript code into TypeScript code to improve type safety and code quality.",
-        "Researched and implemented SSO integration for website applications, enabling users to switch and use different internal applications easily.",
-        "Assisted other frontend engineers when implementing new libraries, such as React Query, NextJS, and Verdaccio and ensuring efficient implementation through code reviews.",
+        "Pioneered the micro frontend pattern using React and Rollup",
+        "Maintain and update a legacy project. Upgrading JavaScript code into TypeScript code",
+        "Researched and implemented SSO integration for website applications",
+        "Implement unit test using Jest and React Testing Library",
       ],
+      images: ["/bluebird-1.png"],
     },
     {
       title: "Frontend Engineering Tutor",
@@ -29,6 +31,8 @@ export const CONTENTS: Record<"experience" | "projects", ContentType[]> = {
         "Provide a learning curriculum for Frontend debugging, along with all the learning materials needed",
         "Provide the learning materials for introduction to HTML course",
       ],
+      images: ["/myskill-1.png"],
+      url: "https://myskill.id/course/introduction-to-html",
     },
     {
       title: "Frontend Engineer",
@@ -36,19 +40,23 @@ export const CONTENTS: Record<"experience" | "projects", ContentType[]> = {
       description:
         "An NGO accelerating Indonesia energy transition through youth empowerment and multi-institutional collaboration",
       points: [
-        "Maintain and update landing page using NextJS, TypeScript and Firebase, allowing 1000 users to participate in SRE multi-institutional projects.",
+        "Maintain and update landing page using NextJS, TypeScript and Firebase.",
         "Developed an E-commerce platform for SRE partners using NextJS and Typescript.",
       ],
+      images: ["/sre-1.png"],
+      url: "https://sre.co.id",
     },
     {
       title: "Frontend Engineer",
       company: "Arvis",
       description:
-        "Arvis is a Software Development company, providing solutions for real problems.",
+        "Arvis is a Software Development company, specializing in E-plantation products.",
       points: [
-        "Developed an MVP for an agricultural startup with NextJS, Redux, and TypeScript, leading the startup to a Seed round funding.",
+        "Developed an MVP for an agricultural startup with NextJS, Redux, and TypeScript.",
         "Developed a stock management app using React, Express, and PostgreSQL for a client’s yearly stock take.",
       ],
+      images: ["/arvis-1.png"],
+      url: "https://aria-indonesia.id/",
     },
     {
       title: "Frontend Engineer",
@@ -58,9 +66,9 @@ export const CONTENTS: Record<"experience" | "projects", ContentType[]> = {
       points: [
         "Developed an MVP for loocale using NextJS, Express, and MySQL, leading to a funding from a university incubation program",
       ],
+      images: ["/loocale-1.png"],
+      url: "https://loocale.id/discover/",
     },
   ],
-  projects: [
-		
-	],
+  projects: [],
 };
