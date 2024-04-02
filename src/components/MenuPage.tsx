@@ -1,4 +1,4 @@
-import { modalOpenAnimation, removeModalOpenAnimation } from "../animations/modalOpen";
+import { modalOpenAnimation, removeModalCloseAnimation, removeModalOpenAnimation, reverseModalOpenAnimation } from "../animations/modalOpen";
 import Modal from "./Modal";
 import { useState } from "react";
 import "../animations/MenuPage/menu.css";
@@ -12,6 +12,7 @@ const MenuPage = () => {
       <div className=" w-screen overflow-hidden h-screen bg-black flex flex-col items-center justify-center sm:items-stretch sm:justify-normal">
         <button
           onClick={() => {
+						removeModalCloseAnimation();
             modalOpenAnimation();
             setTimeout(() => {
               setModalType("experience");
@@ -23,6 +24,7 @@ const MenuPage = () => {
         </button>
         <div
           onClick={() => {
+						removeModalCloseAnimation();
             modalOpenAnimation();
             setTimeout(() => {
               setModalType("projects");
@@ -45,7 +47,8 @@ const MenuPage = () => {
         open={modalType !== undefined}
         type={modalType!}
         onCloseModal={() => {
-          removeModalOpenAnimation();
+					removeModalOpenAnimation();	
+          reverseModalOpenAnimation();
           setModalType(undefined);
         }}
       />

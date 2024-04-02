@@ -15,3 +15,20 @@ export const removeModalOpenAnimation = () => {
 		dividers?.children[i].classList.remove("animate-height")
 	}
 };
+export const removeModalCloseAnimation = () => {
+  const dividers = document.querySelector(".invisible-modal");
+
+  dividers?.classList.remove("reverse-invisible-modal-animation");
+	for (let i = 0; i < (dividers?.children.length || 0); i++) {
+		dividers?.children[i].classList.remove("shrink-height")
+	}
+};
+
+export const reverseModalOpenAnimation = () => {
+	const dividers = document.querySelector(".invisible-modal");
+
+  dividers?.classList.add("reverse-invisible-modal-animation");
+  for (let i = 0; i < (dividers?.children.length || 0); i++) {
+		dividers?.children[i].classList.add("shrink-height")
+	}
+}
