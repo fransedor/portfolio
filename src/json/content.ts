@@ -70,5 +70,43 @@ export const CONTENTS: Record<"experience" | "projects", ContentType[]> = {
       url: "https://loocale.id/discover/",
     },
   ],
-  projects: [],
+  projects: [
+		{
+			title: "E-Timesheet Portal",
+			company: "Bluebird Group",
+			description: "A digitalized end-to-end timesheet solution for Bluebird Group drivers",
+			points: [
+				"Develop the portal using ReactJS and Redux",
+				"Integrate with internal design system library and BE APIs",
+				"Provide localization and multi role authorization"
+			]
+		},
+		{
+			title: "Area Management",
+			company: "Bluebird Group",
+			description: "Centralized area management for internal tools",
+			points: [
+				"Draw polygons and circles using ReactJS and Leaflet",
+				"Export components as UI library for other internal tools",
+			]
+		},
+		{
+			title: "Seller Dashboard",
+			company: "Entity",
+			description: "Seller dashboard to manage products and orders",
+			points: [
+				"Develop the design system components using TailwindCSS",
+				"Develop the website using NextJS, Fastify, and PostgreSQL",
+			]
+		},
+		{
+			title: "Landing Page",
+			company: "Society of Renewable Energy (SRE)",
+			description: "Landing page to showcase SRE activity and achievements",
+			points: [
+				"Developed the website using NextJS, TailwindCSS, and Firebase",
+			]
+		},
+
+	],
 };
