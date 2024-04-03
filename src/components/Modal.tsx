@@ -1,4 +1,3 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { CONTENTS } from "../json/content";
 import ModalContent from "./ModalContent";
 import { useState } from "react";
