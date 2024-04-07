@@ -79,7 +79,8 @@ export const CONTENTS: Record<"experience" | "projects", ContentType[]> = {
 				"Develop the portal using ReactJS and Redux",
 				"Integrate with internal design system library and BE APIs",
 				"Provide localization and multi role authorization"
-			]
+			],
+			images: ["/ets-portal.png"]
 		},
 		{
 			title: "Area Management",
@@ -91,22 +92,48 @@ export const CONTENTS: Record<"experience" | "projects", ContentType[]> = {
 			]
 		},
 		{
+			title: "Private package registry",
+			company: "Bluebird Group",
+			description: "A private package registry to implement micro frontend architecture",
+			points: [
+				"Work with DevOps team to initialize a private registry on frontend team dedicated server",
+				"Assited other frontend engineers on micro frontend implementation",
+				"Initialize the library repository, leading to a standardized library boilerplate for our frontend team"
+			],
+			images: ["/verdaccio.png"]
+		},
+		{
 			title: "Seller Dashboard",
 			company: "Entity",
 			description: "Seller dashboard to manage products and orders",
 			points: [
 				"Develop the design system components using TailwindCSS",
 				"Develop the website using NextJS, Fastify, and PostgreSQL",
-			]
+			],
+			images: ["/seller-entity.png"],
+			url: "https://www.entity.co.id/"
 		},
 		{
 			title: "Landing Page",
 			company: "Society of Renewable Energy (SRE)",
 			description: "Landing page to showcase SRE activity and achievements",
 			points: [
-				"Developed the website using NextJS, TailwindCSS, and Firebase",
-			]
+				"Developed the website using NextJS, TailwindCSS",
+				"Integrate with Firebase Authentication for RBAC"
+			],
+			images: ["/sre-1.png"],
+			url: "https://sre.co.id"
 		},
-
+		{
+			title: "Landing Page",
+			company: "Serenity",
+			description: "Landing page showcasing The Serenity housing cluster",
+			points: [
+				"Developed the website using NextJS, TailwindCSS",
+				"Integrate with Firebase Storage for storing images and videos"
+			],
+			images: ["/serenity.png"],
+			url: "https://www.theserenity.co.id/projects/jatiasih"
+		}
 	],
 };
